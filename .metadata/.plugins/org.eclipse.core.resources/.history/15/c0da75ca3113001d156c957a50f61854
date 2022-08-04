@@ -1,0 +1,20 @@
+
+public class MensagemJava {
+
+	public static void main(String[] args) {
+		//Criando variáveis em Java
+		String usuario = "Cristhiane";
+		 int idade = 27;
+		 
+		 int num1 = 10;
+		 int num2 = 20;
+		 int resultado = num2 ^ num1;
+		
+		//Mensagem que será exibida no console
+		System.out.println("Seja bem vindo ao Mundo Java, " + usuario + "!");
+		System.out.println("Vamos Fazer um super desenvolvimento em Java.");
+		System.out.println(resultado);
+		
+	}
+
+}

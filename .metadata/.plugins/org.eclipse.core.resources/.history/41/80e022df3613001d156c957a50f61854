@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		//instanciando o scanner
+		Scanner read = new Scanner(System.in);
+		
+		//criando as variáveis
+		
+		int num1 = read.nextInt();
+		int num2 = read.nextInt();
+		
+	}
+
+}
