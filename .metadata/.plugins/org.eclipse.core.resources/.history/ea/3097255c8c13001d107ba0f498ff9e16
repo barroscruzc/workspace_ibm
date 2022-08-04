@@ -2,7 +2,7 @@
 public class MensagemJava {
 
 	public static void main(String[] args) {
-		//Criando variáveis
+		//Criando variáveis em Java
 		String usuario = "Cristhiane";
 		 
 		 int num1 = 10;

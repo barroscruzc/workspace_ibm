@@ -1,10 +1,9 @@
 import java.util.Scanner;
 public class Principal {
 	
-	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		
-		//instanciando o leitor
+		//instanciando o scanner
 		Scanner read = new Scanner(System.in);
 		//criando as variáveis
 		int num1;
