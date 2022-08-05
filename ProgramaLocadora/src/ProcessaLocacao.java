@@ -11,7 +11,7 @@ public class ProcessaLocacao {
 				+ "|/ \\______|______/ \\_|| \r\n"
 				+ "_\\_/_____________\\_/_______\r\n"
 				+ "");
-		System.out.println("---LOCADORA DE VEÍCULOS---- \n \n");
+		System.out.println("---LOCADORA DE VEÍCULOS---- \n");
 		System.out.println("Escreva o número da opção desejada:");
 		System.out.println("1 - Visualizar todos os carros \n2 - Pesquisa por número \n3 - Sair");
 
