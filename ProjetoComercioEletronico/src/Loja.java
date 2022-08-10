@@ -4,13 +4,10 @@ public class Loja {
 	public static void main(String[] args) {
 		
 		Produto p; //Declarando o objeto
-		p = new Produto(); //Reservando (alocar) a memória
-		p.setCodigo(123);
-		p.setDescricao("computador");
-		p.setPreco(2500.00);
+		p = new Produto(123, "computador", 2500.00); 
 		
 		Produto p2;
-		p2 = new Produto(); 
+		p2 = new Produto(); //Reservando (alocar) a memória
 		p2.setCodigo(456);
 		p2.setDescricao("Cadeira escritório");
 		p2.setPreco(700.00);

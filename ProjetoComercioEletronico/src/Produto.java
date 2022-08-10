@@ -13,6 +13,19 @@ public class Produto {
 	private String descricao;
 	private double preco;
 	
+	//Construtores
+	
+	public Produto() {
+		super();
+	}
+	
+	public Produto(int codigo, String descricao, double preco) {
+		super();
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.preco = preco;
+	}
+
 	//Definindo os getters e setters (métodos para setar ou recuperar as informações contidas nos atributos	
 	public int getCodigo() {
 		return codigo;
@@ -40,7 +53,7 @@ public class Produto {
 
 	//Métodos Void (sem retorno)
 	//Método que imprime na tela os atributos do produto
-	void mostrarAnuncio () {
+	public void mostrarAnuncio () {
 		System.out.println("------ PRODUTO EM OFERTA ------");
 		System.out.println(codigo + ": " + descricao);
 		System.out.printf("R$ %.2f\n", preco);
