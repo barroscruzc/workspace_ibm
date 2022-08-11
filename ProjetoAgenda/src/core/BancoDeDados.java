@@ -52,9 +52,10 @@ public class BancoDeDados {
 			while (this.resultset.next()) {
 				String meuID = resultset.getString("id");
 				String meuNome = resultset.getString("nome");
+				String meuTel = resultset.getString("telefone");
 
-				System.out.println("id: " + meuID);
-				System.out.println("nome: " + meuNome);
+				System.out.println("ID: " + meuID + "\nNome: " + meuNome + "\nTelefone: " + meuTel);
+				System.out.println("-----------------------------------");
 			}
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());
@@ -63,10 +64,10 @@ public class BancoDeDados {
 	}
 	
 	//Criando o método de inserção de registros
-	public void inserirContato(String nome) {
+	public void inserirContato(String nome, String telefone) {
 		try {
 			//linha de execução da sintaxe de insert em SQL
-			String query="insert into contatos (nome) values ('" + nome + "');";
+			String query="insert into contatos (nome, telefone) values ('" + nome + "', '" + telefone + "');";
 			System.out.println(query);
 			this.statement.executeUpdate(query);
 			
@@ -76,10 +77,22 @@ public class BancoDeDados {
 	}
 	
 	//criando  o método de alteração de registros
-	public void editarContato(String nome, int id) {
+	public void editarNomeContato(String nome, int id) {
 		try {
 			//linha de execução da sintaxe de insert em SQL
 			String query="update contatos set nome='" + nome + "' where id='" +  id + "';";
+			System.out.println(query);
+			this.statement.executeUpdate(query);
+			
+		} catch (Exception e) {
+			System.out.println("Erro: " + e.getMessage());
+		}
+	}
+	
+	public void editarTelContato(String telefone, int id) {
+		try {
+			//linha de execução da sintaxe de insert em SQL
+			String query="update contatos set telefone='" + telefone + "' where id='" +  id + "';";
 			System.out.println(query);
 			this.statement.executeUpdate(query);
 			
