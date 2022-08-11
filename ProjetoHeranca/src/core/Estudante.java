@@ -31,8 +31,8 @@ public class Estudante extends Pessoa{
 		this.curso = curso;
 	}
 	
-	/* Aqui fazemos uma sobrescrita de método, ou seja, uma redefinição
-	 * sobrescrita != sobrecarga
+	/* Aqui fazemos uma sobrescrita de método, ou seja, uma redefinição.
+	 * Lembrando que sobrescrita é diferente de sobrecarga!
 	 * sobrecarga são várias definições de um mesmo nome de método 
 	 * dentro da mesma classe
 	 */

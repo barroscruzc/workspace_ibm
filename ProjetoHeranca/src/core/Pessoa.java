@@ -4,9 +4,9 @@ public class Pessoa {
 
 	
 	/*Utilizando a palavra protected, fazemos uma 
-	 * abertura de acesso para os métodos da subclasse 
-	 * acessarem a estrutura da superclasse, sem a 
-	 * necessidade de utilizar métodos get e set.
+	 * abertura de acesso para que os métodos da subclasse 
+	 * acessem a estrutura da superclasse, sem a 
+	 * necessidade de utilizar getters e setters.
 	 */
 	protected String nome;
 	protected String email; 
