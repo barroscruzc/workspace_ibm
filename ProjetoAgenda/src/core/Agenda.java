@@ -10,7 +10,6 @@ public class Agenda {
 		if(sintaxeBanco.estaConectado()) {
 			String linha = "===================================";
 			
-			sintaxeBanco.excluirContato("8");
 			System.out.println(linha + "\nBanco de dados conectado com sucesso!\n" + linha);
 			
 			//permite chamar a opção read do nosso crud 
