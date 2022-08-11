@@ -18,12 +18,12 @@ describe clientes;
 insert into clientes 
 (nome_cliente, email_cliente, whats_cliente)
 values
-("Cristhiane Barros", "cris@ibm.com.br", "21973183824");
+("Cristhiane Barros", "cris@ibm.com.br", "21999999999");
 
 -- outra forma para inserir registros em uma tabela (obrigatoriamente os campos devem estar na ordem correta)
 insert into clientes
 values
-(null, "Eduardo Vianan", "eduardo@tormene.com.br", "21986000932");
+(null, "Eduardo Vianan", "eduardo@tormene.com.br", "21999999999");
 
 -- visualizando as informações do nosso campo de dados
 select * from clientes;
