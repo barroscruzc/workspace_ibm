@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"core","l":"Agenda"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"core","l":"BancoDeDados"}];updateSearchResults();

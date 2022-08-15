@@ -1,12 +1,26 @@
 package core;
 
+/**
+ * A classe <b>Agenda</b> é responsável por invocar os métodos existentes na classe <b>BancoDeDados</b>, 
+ * para realizar as operações de criação, leitura, atualização e exclusão de registros no banco de dados.
+ * @author Cristhiane Barros da Cruz.
+ * @since aug 2022.
+ * @version 1.0
+ *
+ */
 public class Agenda {
 
 	public static void main(String[] args) {
+	
 		BancoDeDados sintaxeBanco = new BancoDeDados();
 		
+		/** Após instanciar um novo objeto da classe BancoDeDados, 
+		 * é invocado o método <b>conectar()</b>, que utiliza as informações
+		 * necessárias para acesso ao Database.
+		 * */
 		sintaxeBanco.conectar();
 		
+		/** Caso a conexão com o Database seja concluída com sucesso, uma das funções CRUD é realizada. */
 		if(sintaxeBanco.estaConectado()) {
 			String linha = "===================================";
 			

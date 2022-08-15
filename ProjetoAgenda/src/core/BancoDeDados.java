@@ -26,7 +26,6 @@ public class BancoDeDados {
 			Class.forName(driver);
 			this.connection = DriverManager.getConnection(servidor, usuario, senha);
 			this.statement = this.connection.createStatement();
-
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());
 		}
