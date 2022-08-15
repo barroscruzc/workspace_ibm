@@ -1,11 +1,17 @@
 package com.projeto.ecommerce.Model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity                          //indica que a classe eh armazenavel no banco
 @Table(name="departamento")      //nomeia a table
@@ -21,6 +27,11 @@ public class Departamento {
 	
 	@Column(name="descricao", nullable = false)
 	private String descricao;
+	
+																	//cascade: todas as alterações feitas em departamento repercutem em produtos
+	@OneToMany(mappedBy="departamento", cascade = CascadeType.ALL) //dentro de produto, esse é o item que se refere ao departamento
+	@JsonIgnoreProperties("departamento") //onde temos a relação bidirecional, é necessário informar quando interromper o ciclo de referência/recuperação de dados, evitando loop infinito
+	private List<Produto> listaProdutos;
 	
 	public Integer getCodigo() {
 		return codigo;
