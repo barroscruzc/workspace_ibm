@@ -3,7 +3,11 @@ package com.projeto.ecommerce.Controller;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projeto.ecommerce.Model.Produto;
@@ -22,11 +26,22 @@ public class ProdutoController {
 	}
 	
 	//recuperar pelo ID
-	//@GetMapping("/produtos/{codigo}")
-	//public ArrayList<Produto> recuperarPeloCodigo(){
-	//	return service.recuperarPeloCodigo(Integer codigo);
-	//}
-	//
+	@GetMapping("/produtos/{codigo}")
+	public ResponseEntity<Produto> recuperarPeloCodigo(@PathVariable Integer codigo){
+		Produto res = service.recuperarPeloCodigo(codigo);
+		if (res != null) {
+			return ResponseEntity.ok(res);
+		}
+		return ResponseEntity.status(404).build();
+	}
+
 	//cadastrar novo
-	//@PostMapping
+	@PostMapping("/produtos")
+	public ResponseEntity<Produto> inserirNovoProduto(@RequestBody Produto novo){
+		Produto res = service.novoProduto(novo);
+		if (res != null) {
+			return ResponseEntity.ok(res);
+		}
+		return ResponseEntity.badRequest().build();
+	}
 }
